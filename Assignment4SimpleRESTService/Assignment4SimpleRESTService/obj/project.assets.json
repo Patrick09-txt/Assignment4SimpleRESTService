@@ -75,6 +75,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ModelLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ModelLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelLib.dll": {}
+        }
       }
     }
   },
@@ -185,10 +195,16 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "ModelLib/1.0.0": {
+      "type": "project",
+      "path": "../ModelLib/ModelLib.csproj",
+      "msbuildProject": "../ModelLib/ModelLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ModelLib >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -223,7 +239,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Patrick\\Documents\\GitHub\\Assignment4SimpleRESTService\\Assignment4SimpleRESTService\\ModelLib\\ModelLib.csproj": {
+              "projectPath": "C:\\Users\\Patrick\\Documents\\GitHub\\Assignment4SimpleRESTService\\Assignment4SimpleRESTService\\ModelLib\\ModelLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
